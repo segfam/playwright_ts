@@ -14,14 +14,7 @@ export default class LoginPage {
 
      }
 
-    // public async loginToApplication (username : string, password : string, loginURL : string) {
-    //     await this.page.goto(loginURL);
-    //     await this.validatepageURL (ApplicationURL.BASE_URL);
-    //     await this.userNameField.fill(username);
-    //     await this.passwordfield.fill(password);
-    //     await this.loginButton.click();
-    // }
-    public async loginToApplication (username = process.env.STANDART_USER as string, password = process.env.CORRECT_PASSWORD as string, loginURL : string) {
+    public async loginToApplication (username : string, password : string, loginURL : string) {
         await this.page.goto(loginURL);
         await this.validatepageURL (ApplicationURL.BASE_URL);
         await this.userNameField.fill(username);
